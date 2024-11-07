@@ -86,13 +86,15 @@ public class Main {
                 if (archonShards <= 0 || archonShards > 5) System.out.println("Please input a valid number of Archon Shards (Max.5)");
             }
 
-            while (tauforged == 0 || tauforged > archonShards) {
+            do {
+
                 System.out.println("How many of them are Tauforged?");
                 tauforged = read.nextInt();
                 System.out.println(" ");
 
                 if (tauforged > archonShards) System.out.println("Number of Tauforged shards can't exceed number of Archon Shards.");
-            }
+
+            } while (tauforged > archonShards);
 
             archonShards -= tauforged;
         }
@@ -109,5 +111,6 @@ public class Main {
         System.out.println(" ");
         System.out.println("If not using Yareli:");
         System.out.println((baseCrit) * (1 + modCritChance + galvCross + (0.25 * archonShards) + (0.375 * tauforged) + riven) + arcaneAvenger);
+
     }
 }
