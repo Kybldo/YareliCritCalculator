@@ -95,7 +95,6 @@ public class Main {
             }
 
             archonShards -= tauforged;
-
         }
 
         System.out.println("Using Arcane Avenger? (Y / N):");
